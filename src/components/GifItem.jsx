@@ -13,6 +13,6 @@ export const GifItem = ({ title, url }) => {
 
 
 GifItem.propTypes = {
-    title: PropTypes.any.isRequired,
+    title: PropTypes.string.isRequired,
     url: PropTypes.any.isRequired,
   }

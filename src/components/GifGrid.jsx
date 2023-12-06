@@ -30,7 +30,7 @@ export const GifGrid = ({ category }) => {
       <h3>{ category }</h3>
 
       {
-        isLoading && ( <GifLoader>Hola</GifLoader>)
+        isLoading && ( <GifLoader></GifLoader>)
       }
 
 
@@ -59,5 +59,5 @@ export const GifGrid = ({ category }) => {
 }
 
 GifGrid.propTypes = {
-  category: PropTypes.any.isRequired,
+  category: PropTypes.string.isRequired,
 }

@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { AddCategory, GifGrid } from "./components";
+import { useState } from 'react'
+import { AddCategory, GifGrid } from './components';
 
 export const GifExpertApp = () => {
 
@@ -35,7 +35,7 @@ export const GifExpertApp = () => {
             
         }
         
-        {/* lo que hacemos en el fragmento de codigo anterior es utilizar el metodo map en el array categories y asignarle a cada elemento iterado dentro de ese array, un <li> mediante el arroy function, que a su vez pasa el "caregory" para renderizar los elementos iterados dentro de esos <li>, en este caso renderizariamos 1. One puncho 2. Dragon Ball */}
+        {/* lo que hacemos en el fragmento de codigo anterior es utilizar el metodo map en el array categories y asignarle a cada elemento iterado dentro de ese array, un <li> mediante el arrow function, que a su vez pasa el "caregory" para renderizar los elementos iterados dentro de esos <li>, en este caso renderizariamos 1. One punch 2. Dragon Ball */}
             {/* Gif Item */}
     </>
   )

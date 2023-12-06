@@ -15,7 +15,7 @@ export const AddCategory = ({ onNewCategory }) => {
     const onSubmit = (event) => {
         event.preventDefault()
 
-        if( inputValue.trim().length < 1 ) return;
+        if( inputValue.trim().length <= 1 ) return;
         // En este if limpiamo de espacios en blanco al inicio y el final del inputValue con .trim() y le indicamos de que si el length de inputValue limpio, es menor a 1 que se termine la funcion en ese momento con el return y no ejecute lo siguiente. Con esto conseguimos que si se intenta enviar el input vacio, no se añada un nuevo list item vacio en la lista.
 
         onNewCategory( inputValue.trim() )
@@ -28,7 +28,7 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
   return (
-    <form action="" onSubmit={ onSubmit }>
+    <form action="" aria-label='form' onSubmit={ onSubmit }>
         <input
             type="text"
             placeholder="Buscar Gifs"
@@ -44,5 +44,6 @@ export const AddCategory = ({ onNewCategory }) => {
 // Luego el componente padre se encarga de añadir, ese nuevo valor que le envio este componente, al listado. Utilizando setCategories( [ newCategory, ...categories ] ) dentro de la funcion "onAddCategory"
 
 AddCategory.propTypes = {
-    onNewCategory: PropTypes.any.isRequired,
+    onNewCategory: PropTypes.func.isRequired,
   }
+  // .func indica que es una funcion

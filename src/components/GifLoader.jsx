@@ -2,6 +2,6 @@
 
 export const GifLoader = () => {
   return (
-    <span className="loader"></span>
+    <span className="loader" data-testid="loader"></span>
   )
 }
